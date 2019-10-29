@@ -1,0 +1,51 @@
+
+PImage img;
+PImage img1;
+int img1x=0;int img1y=0;
+PImage img2;
+int img2x=200;int img2y=200;
+PImage img3;
+int img3x=400;int img3y=400;
+int sp1x = int(random(5,15));int sp1y = int(random(5,15));
+int sp2x = int(random(5,15));int sp2y = int(random(5,15));
+int sp3x = int(random(5,15));int sp3y = int(random(5,15));
+PImage imgOri;
+int[][] filter1 = new int[][]{{0,-1,0},{-1,5,-1},{0,-1,0}}; 
+int[][] filter2 = new int[][]{{-1,-1,-1},{-1,8,-1},{-1,-1,-1}};
+int[][] filter3 = new int[][]{{-2,-1,1},{1,1,1},{1,1,1}};
+void setup() { 
+  //size(2050,1200); 
+  fullScreen();
+  imgOri = loadImage("tech.jpg"); 
+  img = imgOri; 
+  background(0); 
+  image(imgOri,0,0); 
+  img1=transform(img,filter1,1.5);
+  img2=transform(img,filter2,0.5);
+  img3=transform(img,filter3, 2);
+}
+
+void draw(){
+ background(40,67,78);
+ background(0);
+ 
+ img1x = img1x+sp1x; img1y = img1y+sp1y;
+ img2x = img2x+sp2x; img2y = img2y+sp2y;
+ img3x = img3x+sp3x; img3y = img3y+sp3y;
+ if(img1x>width-img1.width || img1x<1) sp1x=-sp1x;
+ if(img2x>width-img2.width || img2x<1)  sp2x=-sp2x;
+ if(img3x>width-img3.width || img3x<1)  sp3x=-sp3x;
+ if(img1y>height-img1.height || img1y<1) sp1y=-sp1y;
+ if(img2y>height-img2.height || img2y<1) sp2y=-sp2y;
+ if(img3y>height-img3.height || img3y<1) sp3y=-sp3y;
+ noTint();
+ image(imgOri,0,0);
+ tint(255,127);
+ image(img1,img1x,img1y);
+ tint(random(0,255),random(0,255),random(0,255),127);
+  image(img2,img2x,img2y);
+ tint(255,127);
+ image(img3,img3x,img3y);
+ 
+  
+}

@@ -1,0 +1,13 @@
+
+PImage img;
+PImage imgOri; 
+int[][] filter = new int[][]{{0,-1,0},{-1,5,-1},{0,-1,0}}; 
+void setup() { 
+  size(2050,1200); 
+  imgOri = loadImage("tech.jpg"); 
+  img = imgOri; 
+  background(0); 
+  image(imgOri,0,0); 
+  PImage img2=transform(img,filter);
+  image(img2,1000,0); 
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<me_node>
+  <address id="0" address="Capra hircus">Goat</address>
+  <address id="1" address="Panthera pardus">Leopard</address>
+  <address id="2" address="Equus zebra">Zebra</address>
+</me_node>

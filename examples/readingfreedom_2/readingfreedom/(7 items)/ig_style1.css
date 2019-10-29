@@ -1,0 +1,18 @@
+DIV{
+	font-family:Arial;
+	font-size: 8px;
+	color: #2A2B30;
+}
+.bodyfont {
+	font-family:Arial;
+	color: #444455;
+	font-size: 11px;
+	line-height: 18px;
+}
+.headfont {
+	font-family:Arial;
+	color: #336699;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: bold;
+}
